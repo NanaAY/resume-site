@@ -11,7 +11,7 @@ import {
   NavigationMenuList,
 } from "./components/ui/navigation-menu";
 import { useRef } from "react";
-
+//TODO: Add avatar, change color scheme, update buttons, change projects section to tree view
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -47,7 +47,7 @@ function App() {
   ];
   return (
     <>
-      <header className="border-b-2  p-3 flex fixed top-0 right-0 left-0 justify-between">
+      <header className=" bg-transparent backdrop-blur-md px-6 py-3 flex fixed top-0 right-0 left-0 justify-between">
         <NavigationMenu>
           <NavigationMenuList className="gap-x-3">
             <NavigationMenuItem>
