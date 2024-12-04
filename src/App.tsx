@@ -114,10 +114,10 @@ function App() {
       </header>
       <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <section ref={aboutRef} id="about">
-          <h1 className="mt-16 mb-4 font-bold text-6xl">Nana Osei Asiedu</h1>
+          <h1 className="mt-16 mb-4 font-bold text-7xl">Nana Osei Asiedu</h1>
           <p className="mb-4 text-3xl text-muted-foreground">
             Junior at Calvin University with a passion for frontend development
-            and design. Sometimes I take pictures.
+            and design. Photographer by choice.
           </p>
         </section>
         <section ref={projectsRef} id="projects" className="my-8">

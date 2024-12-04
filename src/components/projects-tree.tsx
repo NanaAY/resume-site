@@ -12,7 +12,7 @@ type TOCProps = {
 
 const TOC = ({ toc }: TOCProps) => {
   return (
-    <Tree className="w-full h-60 bg-background p-2 rounded-md" indicator={true}>
+    <Tree className="w-full h-90 bg-background p-2 rounded-md" indicator={true}>
       {toc.map((element, _) => (
         <TreeItem key={element.id} elements={[element]} />
       ))}
