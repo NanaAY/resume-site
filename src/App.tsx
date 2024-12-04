@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-      <header className=" bg-transparent backdrop-blur-md px-6 py-3 flex fixed top-0 right-0 left-0 justify-between">
+      <header className="z-50 bg-transparent backdrop-blur-md px-6 py-3 flex fixed top-0 right-0 left-0 justify-between">
         <NavigationMenu>
           <NavigationMenuList className="gap-x-3">
             <NavigationMenuItem>
@@ -137,7 +137,7 @@ function App() {
           </p>
         </section>
         <section ref={projectsRef} id="projects" className="my-8">
-          <h3 className="mb-4 font-semibold text-3xl">Projects</h3>
+          <h3 className="mb-4 font-semibold text-4xl">Projects</h3>
           <ProjectsTreeWrapper />
         </section>
         <section ref={coursesRef} id="courses" className="mb-8">
