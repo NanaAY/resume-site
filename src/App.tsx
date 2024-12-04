@@ -114,9 +114,11 @@ function App() {
       </header>
       <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <section ref={aboutRef} id="about">
-          <h1 className="mt-16 mb-4 font-bold text-7xl">Nana Osei Asiedu</h1>
-          <p className="mb-4 text-3xl text-muted-foreground">
-            Junior at Calvin University with a passion for frontend development
+          <h1 className="mt-16 mb-4 font-bold text-7xl animate-slidein [--slidein-delay:300ms] opacity-0">
+            Nana Osei Asiedu
+          </h1>
+          <p className="mb-4 text-3xl text-muted-foreground animate-slidein [--slidein-delay:500ms] opacity-0">
+            Junior at Calvin University with a passion for Software development
             and design. Photographer by choice.
           </p>
         </section>
