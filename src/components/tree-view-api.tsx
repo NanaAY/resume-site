@@ -263,8 +263,8 @@ const Folder = forwardRef<
           onClick={() => handleExpand(value)}
         >
           {expendedItems?.includes(value)
-            ? (openIcon ?? <FolderOpenIcon className="h-4 w-4" />)
-            : (closeIcon ?? <FolderIcon className="h-4 w-4" />)}
+            ? (openIcon ?? <FolderOpenIcon className="h-6 w-6" />)
+            : (closeIcon ?? <FolderIcon className="h-6 w-6" />)}
           <span>{element}</span>
         </AccordionPrimitive.Trigger>
         <AccordionPrimitive.Content className="text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down relative overflow-hidden h-full">
@@ -332,7 +332,7 @@ const File = forwardRef<
           )}
           onClick={() => selectItem(value)}
         >
-          {fileIcon ?? <FileIcon className="h-4 w-4" />}
+          {fileIcon ?? <FileIcon className="h-6 w-6" />}
           {children}
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Item>

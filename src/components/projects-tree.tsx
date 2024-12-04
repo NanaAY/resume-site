@@ -35,7 +35,7 @@ export const TreeItem = ({ elements }: TreeItemProps) => {
               element={element.name}
               value={element.id}
               isSelectable={element.isSelectable}
-              className="px-px pr-1 text-2xl bg-transparent border-0"
+              className="px-px pr-1 text-2xl text-muted-foreground bg-transparent border-0"
             >
               <TreeItem
                 key={element.id}
