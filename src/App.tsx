@@ -4,7 +4,6 @@ import { Download, Github, LinkedinIcon, Mail } from "lucide-react";
 import myResume from "./assets/files/ay_resume_2024.pdf";
 import myJPG from "./assets/images/IMG_3797.jpg";
 
-import { ModeToggle } from "./components/modeToggle";
 import ProjectsTreeWrapper from "./components/projects-tree";
 
 import { Badge } from "./components/ui/badge";
