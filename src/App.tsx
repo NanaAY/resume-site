@@ -128,7 +128,7 @@ function App() {
             <AvatarFallback>NA</AvatarFallback>
           </Avatar>
 
-          <h1 className="mt-16 mb-4 font-bold text-7xl animate-slidein [--slidein-delay:500ms] opacity-0">
+          <h1 className="mt-8 mb-4 font-bold text-7xl animate-slidein [--slidein-delay:500ms] opacity-0">
             Nana Osei Asiedu
           </h1>
           <p className="mb-4 text-3xl text-muted-foreground animate-slidein [--slidein-delay:700ms] opacity-0">

@@ -10,7 +10,7 @@ import React, {
   useCallback,
   useContext,
   useEffect,
-  useMemo,
+  // useMemo,
   useState,
 } from "react";
 import { Button } from "@/components/ui/button";
@@ -230,8 +230,8 @@ const Folder = forwardRef<
       isSelect,
       children,
       ...props
-    },
-    ref
+    }
+    // ref
   ) => {
     const {
       direction,
@@ -380,7 +380,7 @@ const CollapseButton = forwardRef<
   return (
     <Button
       variant={"ghost"}
-      className="h-8 w-fit p-1 absolute bottom-1 right-2"
+      className="h-4 w-4 rounded-full p-1 absolute bottom-1 right-2"
       onClick={
         expendedItems && expendedItems.length > 0
           ? closeAll
