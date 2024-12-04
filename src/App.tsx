@@ -11,7 +11,9 @@ import {
   NavigationMenuList,
 } from "./components/ui/navigation-menu";
 import { useRef } from "react";
-//TODO: Add avatar, change color scheme, update buttons, change projects section to tree view
+import { Button } from "./components/ui/button";
+import ProjectsTreeWrapper from "./components/projects-tree";
+//TODO: Add avatar, change projects section to tree view
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -51,40 +53,60 @@ function App() {
         <NavigationMenu>
           <NavigationMenuList className="gap-x-3">
             <NavigationMenuItem>
-              <NavigationMenuLink
-                onClick={() => {
-                  aboutRef.current?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Button
+                className="bg-transparent border-0"
+                variant={"linkHover2"}
               >
-                About
-              </NavigationMenuLink>
+                <NavigationMenuLink
+                  onClick={() => {
+                    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  About
+                </NavigationMenuLink>
+              </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                onClick={() => {
-                  projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Button
+                className="bg-transparent border-0"
+                variant={"linkHover2"}
               >
-                Projects
-              </NavigationMenuLink>
+                <NavigationMenuLink
+                  onClick={() => {
+                    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Projects
+                </NavigationMenuLink>
+              </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                onClick={() => {
-                  coursesRef.current?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Button
+                className="bg-transparent border-0"
+                variant={"linkHover2"}
               >
-                Courses
-              </NavigationMenuLink>
+                <NavigationMenuLink
+                  onClick={() => {
+                    coursesRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Courses
+                </NavigationMenuLink>
+              </Button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                onClick={() => {
-                  skillsRef.current?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Button
+                className="bg-transparent border-0"
+                variant={"linkHover2"}
               >
-                Skills
-              </NavigationMenuLink>
+                <NavigationMenuLink
+                  onClick={() => {
+                    skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Skills
+                </NavigationMenuLink>
+              </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -100,51 +122,7 @@ function App() {
         </section>
         <section ref={projectsRef} id="projects" className="my-8">
           <h3 className="mb-4 font-semibold text-3xl">Projects</h3>
-          <a
-            className="flex flex-col gap-y-1 mb-4"
-            target="_blank"
-            href="https://github.com/cs262k-2024"
-          >
-            <div className="w-full flex flex-col gap-x-0 md:gap-x-2">
-              <p className="text-lg font-medium text-foreground text-nowrap">
-                KnightConnect 🕸️
-              </p>
-              <p className="text-lg text-muted-foreground m-0">
-                A mobile application to view, schedule and set reminders for
-                school events and gatherings.
-              </p>
-            </div>
-          </a>
-          <a
-            className="flex flex-col gap-y-1 mb-4"
-            target="_blank"
-            href="https://github.com/NanaAY/luhu-app"
-          >
-            <div className="w-full flex flex-col gap-x-0 md:gap-x-2">
-              <p className="text-lg font-medium text-foreground text-nowrap">
-                Luhu App 🎬
-              </p>
-              <p className="text-lg text-muted-foreground m-0">
-                A website to display movie and tv show info. Made with vanilla
-                javascript.
-              </p>
-            </div>
-          </a>
-          <a
-            className="flex flex-col gap-y-1 mb-4"
-            target="_blank"
-            href="https://github.com/NanaAY/pwp-capstones/tree/master/codecademy%20final%20project"
-          >
-            <div className="w-full flex flex-col gap-x-0 md:gap-x-2">
-              <p className="text-lg font-medium text-nowrap text-foreground">
-                Murder Mystery 💬
-              </p>
-              <p className="text-lg text-muted-foreground">
-                A natural language processing engine to analyze various writing
-                samples text analysis.
-              </p>
-            </div>
-          </a>
+          <ProjectsTreeWrapper />
         </section>
         <section ref={coursesRef} id="courses" className="mb-8">
           <h2 className="mb-4 font-semibold text-2xl">Relevant Courses</h2>
