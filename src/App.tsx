@@ -119,7 +119,7 @@ function App() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <ModeToggle />
+        {/* <ModeToggle /> */}
       </header>
       <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <section ref={aboutRef} id="about">
