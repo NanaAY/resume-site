@@ -1,28 +1,34 @@
+import { useRef } from "react";
 import { Download, Github, LinkedinIcon, Mail } from "lucide-react";
+
+import myResume from "./assets/files/ay_resume_2024.pdf";
+import myJPG from "./assets/images/IMG_3797.jpg";
+
 import { ModeToggle } from "./components/modeToggle";
+import ProjectsTreeWrapper from "./components/projects-tree";
 
 import { Badge } from "./components/ui/badge";
-import myResume from "./assets/files/ay_resume_2024.pdf";
-
+import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
+import { Button } from "./components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "./components/ui/navigation-menu";
-import { useRef } from "react";
-import { Button } from "./components/ui/button";
-import ProjectsTreeWrapper from "./components/projects-tree";
-//TODO: Add avatar, change projects section to tree view
+
+//TODO: Add avatar
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const coursesRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
+
   interface Skill {
     id: number;
     name: string;
   }
+
   const skills: Skill[] = [
     { id: 1, name: "Javascript/Typescript" },
     { id: 2, name: "Python" },
@@ -36,10 +42,12 @@ function App() {
     { id: 10, name: "Git" },
     { id: 11, name: "Vscode" },
   ];
+
   interface Course {
     id: number;
     name: string;
   }
+
   const courses: Course[] = [
     { id: 1, name: "Data Structures & Algorithms" },
     { id: 2, name: "Web Development" },
@@ -47,6 +55,7 @@ function App() {
     { id: 4, name: "Software Engineering" },
     { id: 5, name: "Operating Systems & Networking" },
   ];
+
   return (
     <>
       <header className=" bg-transparent backdrop-blur-md px-6 py-3 flex fixed top-0 right-0 left-0 justify-between">
@@ -114,10 +123,15 @@ function App() {
       </header>
       <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <section ref={aboutRef} id="about">
-          <h1 className="mt-16 mb-4 font-bold text-7xl animate-slidein [--slidein-delay:300ms] opacity-0">
+          <Avatar className="size-24 mt-16 animate-slidein [--slidein-delay:300ms]">
+            <AvatarImage src={myJPG} />
+            <AvatarFallback>NA</AvatarFallback>
+          </Avatar>
+
+          <h1 className="mt-16 mb-4 font-bold text-7xl animate-slidein [--slidein-delay:500ms] opacity-0">
             Nana Osei Asiedu
           </h1>
-          <p className="mb-4 text-3xl text-muted-foreground animate-slidein [--slidein-delay:500ms] opacity-0">
+          <p className="mb-4 text-3xl text-muted-foreground animate-slidein [--slidein-delay:700ms] opacity-0">
             Junior at Calvin University with a passion for Software development
             and design. Photographer by choice.
           </p>
